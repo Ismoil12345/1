@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-1&2y$s@j3@r2gp-jj9qa(p*$v2iv&zxahy2$41w-!!lg7f=2x)')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 
@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-db_url = 'postgres://psgr_user:Bcohzwb4SBKdtHjebSi5SF6W0PuOyivm@dpg-cnpbm7vsc6pc73fqotag-a.oregon-postgres.render.com/psgr'
+db_url = 'postgres://database_ltqc_user:oLaZYarMLGYRZR7mwBp0EU7KOftNnl8z@dpg-cnph4uvsc6pc73frq62g-a.frankfurt-postgres.render.com/database_ltqc'
 DATABASES['default'] = dj_database_url.parse(db_url)
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
